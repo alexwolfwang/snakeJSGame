@@ -17,30 +17,6 @@ var keyLeft = 37, keyUp = 38, keyRight = 39, keyDown = 40, addSpeed = 107;
 var canvas, platform, keyState, score, frames, speed;
 
 
-
-
-
-var snake = {
-    direction: null,
-    last: null, // it's the head of snake, but is the last point in this queue
-    _queue: null,
-
-    init: function(d, x, y) {
-        this.direction = d;
-        this._queue = [];
-        this.insert(x, y);
-    },
-
-    insert: function(x,y) {
-        this._queue.unshift({x:x, y:y});
-        this.last = this._queue[0];
-    },
-
-    remove: function() {
-        return this._queue.pop();
-    }
-};
-
 function setFruit() {
     var empty = [];
 
