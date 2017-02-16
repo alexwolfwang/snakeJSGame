@@ -14,7 +14,7 @@ var Up = 0, Left = 1, Right = 2, Down = 3;
 var keyLeft = 37, keyUp = 38, keyRight = 39, keyDown = 40, addSpeed = 107;
 
 //variables
-var canvas, platform, keyState, score, frames, speed;
+var canvas, platform, keyState, score, frames, speed, info;
 
 
 function setFruit() {
@@ -39,7 +39,9 @@ function main() {
     canvas.height = rows * 20;
     platform = canvas.getContext('2d');
     document.body.appendChild(canvas);
-
+    info = document.createElement('h2');
+    info.innerText = 'Up: up, Left: left, Right: right, Down: down, Accelerate: +';
+    canvas.after(info);
     platform.font = '20px Arial';
 
     frames = 0;
